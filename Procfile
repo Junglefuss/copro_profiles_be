@@ -1,1 +1,1 @@
-web: gunicorn copro_profiles_django.wsgi
+web: gunicorn copro_profiles_django.wsgi --log-file
