@@ -1,0 +1,1 @@
+web: gunicorn copro_profiles_django.wsgi
