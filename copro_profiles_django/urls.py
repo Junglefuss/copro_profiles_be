@@ -16,15 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
+from rest_framework_jwt.views import obtain_jwt_token
 from copro_profiles import views
 
 router = routers.DefaultRouter()
-router.register(r'workers', views.WorkerView, 'worker')
-router.register(r'worker_links', views.WorkerLinkView, 'worker_link')
-router.register(r'teams', views.TeamView, 'team')
-router.register(r'team_links', views.TeamLinkView, 'team_link')
+router.register(r"workers", views.WorkerView, "worker")
+router.register(r"worker_links", views.WorkerLinkView, "worker_link")
+router.register(r"teams", views.TeamView, "team")
+router.register(r"team_links", views.TeamLinkView, "team_link")
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),
+    path("admin/", admin.site.urls),
+    path("token-auth/", obtain_jwt_token),
+    path("api/", include(router.urls)),
 ]
