@@ -1,0 +1,182 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "username": "jonathan",
+      "password": "qwe123"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "username": "hollyaresty",
+      "password": "hollypassword"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "username": "adamaresty",
+      "password": "adampassword"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "username": "charliegoldfuss",
+      "password": "charliepassword"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+      "username": "carolinegoldfuss",
+      "password": "carolinepassword"
+    }
+  },
+  {
+    "model": "copro_profiles.worker",
+    "pk": 1,
+    "fields": {
+      "first_name": "Jonathan",
+      "last_name": "Goldfuss",
+      "email": "jgoldfuss@gmail.com",
+      "phone": "202-725-5770",
+      "headshot": "",
+      "street": "",
+      "city": "Washington",
+      "state": "DC",
+      "country": "USA",
+      "availability": "FTR",
+      "min_hourly_rate": "150",
+      "skills": "branding, marketing strategy, product development, project management, Agile, programming (HTML, CSS, JavaScript, node, Express, Mongo, Python, Django, sQL)",
+      "headline": "Digital product leader, from idea to prototype to launch to growth",
+      "referred_by": "self",
+      "references": "my references",
+      "referred_to": "my recommended teammates",
+      "connections": [],
+      "comments": "my comments",
+      "sign_up_date": "2017-09-01",
+      "updated_date": "2017-09-01",
+      "worker_links": [],
+      "user": 1
+    }
+  },
+  {
+    "model": "copro_profiles.worker",
+    "pk": 2,
+    "fields": {
+      "first_name": "Holly",
+      "last_name": "Arest",
+      "email": "haresty@gmail.com",
+      "phone": "202-555-1212",
+      "headshot": "",
+      "street": "",
+      "city": "New York",
+      "state": "NY",
+      "country": "USA",
+      "availability": "FTR",
+      "min_hourly_rate": "160",
+      "skills": "sales strategy, team-building, account management",
+      "headline": "Enterprise sales leader, building teams and organizations to generate a healthy pipeline",
+      "referred_by": "Jonathan Goldfuss",
+      "references": "my references",
+      "referred_to": "my recommended teammates",
+      "connections": 1,
+      "comments": "my comments",
+      "sign_up_date": "2017-09-01",
+      "updated_date": "2017-09-01",
+      "worker_links": [],
+      "user": 2
+    }
+  },
+  {
+    "model": "copro_profiles.worker",
+    "pk": 3,
+    "fields": {
+      "first_name": "Adam",
+      "last_name": "Aresty",
+      "email": "aaresty@gmail.com",
+      "phone": "202-555-2121",
+      "headshot": "",
+      "street": "",
+      "city": "New York",
+      "state": "NY",
+      "country": "USA",
+      "availability": "FTR",
+      "min_hourly_rate": "155",
+      "skills": "writing, screenplays, scripts, fiction, sci-fi, directing, producing",
+      "headline": "Screenwriter specializing in science-fiction and horror",
+      "referred_by": "Jonathan Goldfuss",
+      "references": "my references",
+      "referred_to": "my recommended teammates",
+      "connections": [1, 2],
+      "comments": "my comments",
+      "sign_up_date": "2017-09-01",
+      "updated_date": "2017-09-01",
+      "worker_links": [],
+      "user": 3
+    }
+  },
+  {
+    "model": "copro_profiles.worker",
+    "pk": 4,
+    "fields": {
+      "first_name": "Charlie",
+      "last_name": "Goldfuss",
+      "email": "cgoldfuss@gmail.com",
+      "phone": "202-725-5770",
+      "headshot": "",
+      "street": "",
+      "city": "Washington",
+      "state": "DC",
+      "country": "USA",
+      "availability": "FTR",
+      "min_hourly_rate": "250",
+      "skills": "loud annoying noises, cooking (eggs, quesadillas, grilled cheese), fortnite, guitar, being nice to everyone",
+      "headline": "Monkey, monkey, monkey, monkey",
+      "referred_by": "Adam Aresty",
+      "references": "my references",
+      "referred_to": "Caroline Goldfuss, sewing, cgoldfuss@gmail.com",
+      "connections": [1, 2, 3],
+      "comments": "my comments",
+      "sign_up_date": "2017-09-01",
+      "updated_date": "2017-09-01",
+      "worker_links": [],
+      "user": 4
+    }
+  },
+  {
+    "model": "copro_profiles.worker",
+    "pk": 5,
+    "fields": {
+      "first_name": "Caroline",
+      "last_name": "Goldfuss",
+      "email": "cgoldfuss@gmail.com",
+      "phone": "202-725-5770",
+      "headshot": "",
+      "street": "",
+      "city": "Washington",
+      "state": "DC",
+      "country": "USA",
+      "availability": "FTR",
+      "min_hourly_rate": "250",
+      "skills": "sewing, fashion advice, lap-sitting, piano, selfies",
+      "headline": "Caroline, Caroline... everybody, Caroline",
+      "referred_by": "Adam Aresty",
+      "references": "my references",
+      "referred_to": "",
+      "connections": [1, 2, 3, 4],
+      "comments": "my comments",
+      "sign_up_date": "2017-09-01",
+      "updated_date": "2017-09-01",
+      "worker_links": [],
+      "user": 5
+    }
+  }
+]

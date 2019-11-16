@@ -101,6 +101,10 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",},
 ]
 
+JWT_AUTH = {
+    "JWT_RESPONSE_PAYLOAD_HANDLER": "copro_profiles_django.utils.my_jwt_response_handler"
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/

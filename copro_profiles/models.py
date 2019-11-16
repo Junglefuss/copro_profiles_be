@@ -1,12 +1,22 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Worker(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        primary_key=True,
+        related_name="user",
+        default="",
+    )
     phone = models.CharField(max_length=20)
-    headshot = models.ImageField(upload_to="worker_images/")
+    headshot = models.ImageField(
+        upload_to="staticfiles/admin/img/worker_images/", blank=True
+    )
     street = models.CharField(max_length=255, blank=True)
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=100)
@@ -41,7 +51,9 @@ class WorkerLink(models.Model):
     )
     label = models.CharField(max_length=100)
     url = models.URLField(max_length=1000)
-    screenshot = models.ImageField(upload_to="link_screenshots")
+    screenshot = models.ImageField(
+        upload_to="staticfiles/admin/img/link_screenshots", blank=True
+    )
     created_date = models.DateField(auto_now_add=True)
     updated_date = models.DateField(auto_now=True)
 
@@ -51,7 +63,7 @@ class WorkerLink(models.Model):
 
 class Team(models.Model):
     team_name = models.CharField(max_length=100)
-    logo = models.ImageField(upload_to="team_logos/")
+    logo = models.ImageField(upload_to="staticfiles/admin/img/team_logos/", blank=True)
     team_admin = models.ForeignKey(
         Worker, on_delete=models.CASCADE, related_name="teams"
     )
@@ -64,11 +76,12 @@ class Team(models.Model):
 
 
 class TeamLink(models.Model):
-    team = models.ForeignKey(
-        Team, on_delete=models.CASCADE, related_name="team_links")
+    team = models.ForeignKey(Team, on_delete=models.CASCADE, related_name="team_links")
     label = models.CharField(max_length=100)
     url = models.TextField(max_length=1000)
-    screenshot = models.ImageField(upload_to="link_screenshots")
+    screenshot = models.ImageField(
+        upload_to="staticfiles/admin/img/link_screenshots", blank=True
+    )
     created_date = models.DateField(auto_now_add=True)
     updated_date = models.DateField(auto_now=True)
 
