@@ -12,15 +12,6 @@ class WorkerLinkView(viewsets.ModelViewSet):
     serializer_class = WorkerLinkSerializer
     queryset = WorkerLink.objects.all()
 
-# class WorkerView(ObjectMultipleModelAPIView):
-#     querylist = [
-#         {'queryset': Worker.objects.all(), 'serializer_class': WorkerSerializer},
-#         {'queryset': WorkerLink.objects.all(), 'serializer_class': WorkerLinkSerializer},
-#     ]
-
-#     def get(self, request, format=None):
-#         return Response("test")
-
 
 class TeamView(viewsets.ModelViewSet):
     serializer_class = TeamSerializer

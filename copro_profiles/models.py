@@ -7,8 +7,11 @@ class Worker(models.Model):
     last_name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
     user = models.OneToOneField(
-        User, on_delete=models.CASCADE, primary_key=True, related_name="user",
+        User, on_delete=models.CASCADE, primary_key=True, related_name="user", to_field="id"
     )
+    # worker_id = models.ForeignKey(
+    #     User, on_delete=models.CASCADE, blank=True, default=""
+    # )
     phone = models.CharField(max_length=20)
     headshot = models.ImageField(
         upload_to="staticfiles/admin/img/worker_images/", blank=True

@@ -1,7 +1,7 @@
 [
   {
     "model": "auth.user",
-    "pk": 1,
+    "pk": 2,
     "fields": {
       "username": "jonathan",
       "password": "qwe123"
@@ -9,7 +9,7 @@
   },
   {
     "model": "auth.user",
-    "pk": 2,
+    "pk": 3,
     "fields": {
       "username": "hollyaresty",
       "password": "hollypassword"
@@ -17,7 +17,7 @@
   },
   {
     "model": "auth.user",
-    "pk": 3,
+    "pk": 4,
     "fields": {
       "username": "adamaresty",
       "password": "adampassword"
@@ -25,7 +25,7 @@
   },
   {
     "model": "auth.user",
-    "pk": 4,
+    "pk": 5,
     "fields": {
       "username": "charliegoldfuss",
       "password": "charliepassword"
@@ -33,7 +33,7 @@
   },
   {
     "model": "auth.user",
-    "pk": 5,
+    "pk": 6,
     "fields": {
       "username": "carolinegoldfuss",
       "password": "carolinepassword"

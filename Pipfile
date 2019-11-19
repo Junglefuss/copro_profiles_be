@@ -10,6 +10,8 @@ django = "*"
 djangorestframework = "*"
 djangorestframework-jwt = "*"
 django-cors-headers = "*"
+django-heroku = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.7"

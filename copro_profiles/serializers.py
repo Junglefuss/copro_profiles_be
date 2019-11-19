@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Worker, WorkerLink, Team, TeamLink
-from accounts.serializers import UserSerializer
+from accounts.serializers import UserSerializerWithToken
 
 
 class TeamLinkSerializer(serializers.ModelSerializer):
@@ -38,7 +38,7 @@ class WorkerLinkSerializer(serializers.ModelSerializer):
 
 class WorkerSerializer(serializers.ModelSerializer):
     worker_links = WorkerLinkSerializer(many=True, read_only=True)
-    user = UserSerializer(many=False, read_only=True)
+    user = UserSerializerWithToken(many=False, read_only=True)
 
     class Meta:
         model = Worker
