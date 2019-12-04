@@ -27,7 +27,8 @@ class Worker(models.Model):
         ("PTI", "Part-time, Irregular hours (here and there)"),
         ("NA", "Not Currently Available, Just staying informed"),
     ]
-    availability = models.CharField(max_length=3, choices=AVAILABILITY, default="FTR")
+    availability = models.CharField(
+        max_length=3, choices=AVAILABILITY, default="FTR")
     min_hourly_rate = models.IntegerField()
     skills = models.TextField(max_length=500)
     headline = models.CharField(max_length=255)
@@ -62,7 +63,8 @@ class WorkerLink(models.Model):
 
 class Team(models.Model):
     team_name = models.CharField(max_length=100)
-    logo = models.ImageField(upload_to="staticfiles/admin/img/team_logos/", blank=True)
+    logo = models.ImageField(
+        upload_to="staticfiles/admin/img/team_logos/", blank=True)
     team_admin = models.ForeignKey(
         Worker, on_delete=models.CASCADE, related_name="teams"
     )
@@ -75,7 +77,8 @@ class Team(models.Model):
 
 
 class TeamLink(models.Model):
-    team = models.ForeignKey(Team, on_delete=models.CASCADE, related_name="team_links")
+    team = models.ForeignKey(
+        Team, on_delete=models.CASCADE, related_name="team_links")
     label = models.CharField(max_length=100)
     url = models.TextField(max_length=1000)
     screenshot = models.ImageField(
@@ -86,4 +89,3 @@ class TeamLink(models.Model):
 
     def __str__(self):
         return f"{self.team}'s link labeled {self.label}: {self.url}"
-
